@@ -6,8 +6,9 @@ const mongoose = require('mongoose')
 
 const app = express()
 app.set('view engine', 'hbs')
-app.listen(3000, ()=>{
-    console.log("listening on port 3000")
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
 })
 // Connect to database
 if (process.env.MONGODB_URI) {
