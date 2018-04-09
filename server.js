@@ -10,5 +10,9 @@ app.listen(3000, ()=>{
 }) 
 
 app.get("/", (req, res)=> {
-    res.send("Hello World")
+    res.redirect("/users")
+})
+
+app.get("/users", (req, res) =>{
+    res.render("/users/index", {})
 })
