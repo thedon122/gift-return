@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = require('../db/schema')
 
-const Store = mongoose.model('Store', Schema.UserSchema)
+const User = mongoose.model('User', Schema.UserSchema)
+
+module.exports = User
